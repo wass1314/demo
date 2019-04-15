@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active: dev
+  thymeleaf:
+    prefix: templates
+
+mybatis:
+  type-aliases-package: com.example.demo.entry
+  mapper-locations: mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size: 500
+    default-statement-timeout: 80
+
+datasource:
+  url: jdbc:mysql://127.0.0.1:3306/demo
+  username: demoAdmin
+  password: 123456
+  driver-class-name: com.mysql.jdbc.Driver
+  type: com.alibaba.druid.pool.DruidDataSource
+
+mapper:
+  mappers:
+  not-empty: false
+  identity: MYSQL
